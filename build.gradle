@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+mainClassName = "Application"
+repositories {
+
+    mavenCentral()
+
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'ca.uhn.hapi.fhir:hapi-fhir-base:4.1.0'
+    compile 'ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:4.1.0'
+    compile 'ca.uhn.hapi.fhir:hapi-fhir-structures-r4:4.1.0'
+    compile 'ca.uhn.hapi.fhir:hapi-fhir-client-okhttp:4.1.0'
+    compile 'ch.qos.logback:logback-classic:1.1.7'
+    implementation files('jcommon-1.0.0.jar')
+    implementation files('jfreechart-1.0.1.jar')
+}
